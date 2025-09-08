@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 6 - Pull Request y Colaboración en GitHub</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step-block img {
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Imágenes de GitHub más grandes */
+    .img-github {
+      max-width: 95%;
+    }
+
+    .step-block {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    pre {
+      background-color: #111;
+      color: #0f0;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .img-caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #eee;
+    }
+
+    .summary {
+      margin-top: 20px;
+      text-align: left;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      color: #eee;
+    }
+
+    .summary h3 {
+      color: #0ff;
+    }
+
+    .example a {
+      color: #0ff;
+      text-decoration: none;
+    }
+
+    .example a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 6 - Crear un Pull Request y Colaborar en GitHub</h1>
+  </header>
+
+  <nav>
+    <a href="paso5.html">⬅️ Paso 5</a> |
+    <a href="index.html">🏠 Inicio</a> |
+    <a href="paso7.html">➡️ Paso 7</a>
+  </nav>
+
+  <section>
+
+    <!-- Acceder al repositorio -->
+    <div class="step-block">
+      <h2>1. Acceder al repositorio</h2>
+      <p>Ingresa al repositorio colaborativo donde subiste tu rama (en caso de que no lo tengas abierto):</p>
+      <div class="example">
+        <a href="https://github.com/MiniTallerGit/ActividadColaborativa" target="_blank">
+          https://github.com/MiniTallerGit/ActividadColaborativa
+        </a>
+      </div>
+    </div>
+
+    <!-- Iniciar Pull Request -->
+    <div class="step-block">
+      <h2>2. Iniciar un Pull Request</h2>
+      <p>Haz clic en la pestaña <strong>Pull requests</strong> </p>
+      <img src="images/pasoseis1.png" alt="Botón Pull Requests en GitHub" class="img-github">
+      <p>Haz clic luego en <strong>New pull request</strong>:</p>
+      <img src="images/pasoseis2.1.png" alt="Seleccionando New Pull Request" class="img-github">
+    </div>
+
+    <!-- Configurar Pull Request -->
+    <div class="step-block">
+      <h2>3. Configurar el Pull Request</h2>
+      <p>Selecciona las ramas:</p>
+      <ul>
+        <li><strong>base:</strong> la rama <code>main</code>.</li>
+        <li><strong>compare:</strong> tu rama personal (por ejemplo, <code>raquel</code>).</li>
+      </ul>
+      <img src="images/pasoseis2.png" alt="Seleccionando ramas para el PR" class="img-github">
+      <p>Seleccione <strong>Create pull request</strong> para empezar a crearlo:</p>
+      <img src="images/pasoseis3.png" alt="Seleccionando ramas para el PR" class="img-github">
+    </div>
+
+    <!-- Añadir título y descripción -->
+    <div class="step-block">
+      <h2>4. Añadir título y descripción para enviar el Pull Request</h2>
+      <p>Escribe un título descriptivo y detalla los cambios que realizaste. Haz clic en <strong>Create pull request</strong> para enviarlo:</p>
+      <img src="images/pasoseis3.1.png" alt="Formulario de título y descripción del PR" class="img-github">
+    </div>
+
+    <!-- Revisar conflictos y merge -->
+    <div class="step-block">
+      <h2>5. Revisar conflictos y hacer Merge</h2>
+      <p>En este caso no hay conflictos y se procede a hacer Merge de manera automática:</p>
+      <img src="images/pasoseis4.png" alt="Botón Merge PR" class="img-github">
+      <p>Se confirma el Merge:</p>
+      <img src="images/pasoseis5.png" alt="Confirmar Merge PR" class="img-github">
+      <p>Se hace el Merge y se cierra el Pull Request (este último es automático):</p>
+      <img src="images/pasoseis6.png" alt="PR cerrado tras merge" class="img-github">
+    </div>
+
+    <!-- Nota final -->
+    <div class="step-block">
+      <h3>💡 Nota extra</h3>
+      <p>Ahora el archivo creado con la frase, está visible para todos los colaboladores del repositorio:</p>
+      <img src="images/pasoseis7.png" alt="PR cerrado tras merge" class="img-github">
+    </div>
+
+    <!-- Resumen -->
+    <div class="summary">
+      <h3>📋 Resumen de pasos del Pull Request:</h3>
+      <ul>
+        <li>Acceder al repositorio colaborativo.</li>
+        <li>Ir a <strong>Pull requests</strong> → <strong>New pull request</strong>.</li>
+        <li>Seleccionar <strong>base</strong> y <strong>compare</strong> (tu rama personal).</li>
+        <li>Agregar título y descripción claros.</li>
+        <li>Crear el Pull Request con <strong>Create pull request</strong>.</li>
+        <li>Esperar revisión y merge a <code>main</code>.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="paso5.html">⬅️ Volver al Paso 5</a> | <a href="paso7.html">➡️ Ir al Paso 7</a></p>
+  </footer>
+</body>
+</html>

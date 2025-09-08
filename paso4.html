@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 4 - Clonar el Repositorio Colaborativo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step-block img {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .step-block {
+      text-align: center;
+    }
+    pre {
+      background-color: #111;
+      color: #0f0; /* verde tipo consola */
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      display: inline-block;
+      text-align: left;
+    }
+    .img-caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #eee; /* más claro para que resalte */
+    }
+    .summary {
+      margin-top: 20px;
+      text-align: left;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      color: #eee;
+    }
+    .summary h3 {
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 4 - Clonar el Repositorio Colaborativo</h1>
+  </header>
+
+  <nav>
+    <a href="paso3.html">⬅️ Paso 3</a> |
+    <a href="index.html">🏠 Inicio</a> |
+    <a href="paso5.html">➡️ Paso 5</a>
+  </nav>
+
+  <section>
+
+    <div class="step-block">
+      <h2>1. Abrir la terminal y moverse a la carpeta deseada</h2>
+      <p>Primero abre tu terminal (o Git Bash en Windows) y muévete a la carpeta donde quieres clonar el repositorio. Por ejemplo, en Documents:</p>
+      <pre><code>cd ~/Documents</code></pre>
+      <img src="images/pasocuatro1.png" alt="Escogiendo donde clonar el repositorio">
+      <p class="img-caption">Moviéndose a la carpeta Documents.</p>
+
+      <h2>2. Clonar el repositorio usando SSH</h2>
+      <p>Copia la URL SSH del repositorio colaborativo y usa el comando <strong>git clone</strong>:</p>
+      <pre><code>git clone git@github.com:MiniTallerGit/ActividadColaborativa.git</code></pre>
+      <img src="images/pasocuatro2.png" alt="Clonando el repo">
+      <p class="img-caption">Ejecutando git clone con la URL SSH del repo.</p>
+      <img src="images/pasocuatro3.png" alt="Repo Clonado">
+      <p class="img-caption">Repositorio clonado exitosamente.</p>
+    </div>
+
+    <div class="step-block">
+      <h2>3. Entrar al repositorio clonado</h2>
+      <p>Después de clonar, entra al repositorio con:</p>
+      <pre><code>cd ActividadColaborativa</code></pre>
+      <img src="images/pasocuatro4.png" alt="Entrando al repo clonado">
+      <p class="img-caption">Accediendo a la carpeta del repositorio.</p>
+    </div>
+
+    <div class="step-block">
+      <h2>4. Verificar rama y estado</h2>
+      <p>Después de clonar, es buena práctica comprobar que todo esté correcto:</p>
+
+      <h3>📌 Ver la rama actual</h3>
+      <p>El comando <strong>git branch</strong> muestra todas las ramas disponibles y marca con un asterisco (*) la rama en la que estás trabajando.  
+      Justo después de clonar solo deberías ver la rama <strong>main</strong>.  
+      En el siguiente paso aprenderás a crear tu propia rama.</p>
+      <pre><code>git branch</code></pre>
+      <img src="images/pasocuatro5.png" alt="Verificando rama actual">
+      <p class="img-caption">Mostrando la rama actual: main.</p>
+
+      <h3>📌 Ver el estado del repositorio</h3>
+      <p>El comando <strong>git status</strong> sirve para comprobar si hay archivos nuevos o modificados que aún no se han guardado (commit).  
+      Justo después de clonar debería decir <em>working tree clean</em>, lo que significa que no hay cambios pendientes:</p>
+      <pre><code>git status</code></pre>
+      <img src="images/pasocuatro6.png" alt="Verificando estado del repositorio">
+      <p class="img-caption">Repositorio limpio y listo para trabajar.</p>
+    </div>
+
+    <div class="summary">
+      <h3>📋 Resumen de comandos usados en este paso:</h3>
+      <ul>
+        <li><code>cd ~/Documents</code> → Moverse a la carpeta Documents.</li>
+        <li><code>git clone git@github.com:MiniTallerGit/ActividadColaborativa.git</code> → Clonar el repositorio remoto usando SSH.</li>
+        <li><code>cd ActividadColaborativa</code> → Entrar a la carpeta del repositorio clonado.</li>
+        <li><code>git branch</code> → Ver en qué rama estás trabajando.</li>
+        <li><code>git status</code> → Comprobar si hay archivos modificados o pendientes de guardar.</li>
+      </ul>
+    </div>
+
+    <div class="step-block">
+      <h3>💡 Nota extra</h3>
+      <p>Ahora cada estudiante tiene su copia del repositorio colaborativo lista para trabajar.  
+      El siguiente paso será <strong>crear su propia rama</strong> para que cada persona pueda trabajar sin afectar el trabajo de los demás.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="paso3.html">⬅️ Volver al Paso 3</a> | <a href="paso5.html">➡️ Ir al Paso 5</a></p>
+  </footer>
+</body>
+</html>

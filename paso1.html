@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 1 - Instalación y Configuración de Básica de Git</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Centrar todo el contenido principal */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Imágenes por defecto */
+    .step-block img, .os-section img:not(.small-img) {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      border-radius: 5px;
+      border: 2px solid #888;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Imágenes de Linux y macOS (forzar tamaño más pequeño) */
+    .small-img {
+      width: 500px; /* tamaño fijo */
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      border: 2px solid #888;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .img-caption {
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    /* Secciones por OS */
+    .os-section {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .os-section h2 {
+      border-bottom: 2px solid #555;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    pre, code {
+      text-align: left;
+    }
+
+    /* Mini menú flotante */
+    .internal-menu {
+      text-align: center;
+      margin: 20px 0;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 8px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+
+    .internal-menu a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .internal-menu a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 1 - Instalación y Configuración de Git</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">🏠 Inicio</a> |
+    <a href="paso2.html">➡️ Paso 2</a>
+  </nav>
+
+  <!-- Mini menú interno flotante -->
+  <div class="internal-menu">
+    Ir a: 
+    <a href="#linux">🐧 Linux</a> | 
+    <a href="#windows">🖥️ Windows</a> | 
+    <a href="#macos">🍏 macOS</a> | 
+    <a href="#todos">✅ Todos (Verificación de versiones)</a>
+  </div>
+
+  <section>
+    <!-- Linux -->
+    <div class="os-section" id="linux">
+      <h2>🐧 Linux</h2>
+      <p>Abre la consola y ejecuta los comandos para descargar e instalar Git.</a></p>
+      <h3>Ubuntu / Debian</h3>
+      <pre><code>sudo apt update
+sudo apt install git</code></pre>
+      <img src="images/clinux.png" alt="Instalación de Git en Ubuntu/Debian" class="small-img">
+
+      <h3>Fedora / CentOS / RHEL</h3>
+      <pre><code>sudo dnf install git</code></pre>
+      <img src="images/cfedora.png" alt="Instalación de Git en Fedora/CentOS/RHEL" class="small-img">
+
+      <h3>Arch Linux / Manjaro</h3>
+      <pre><code>sudo pacman -S git</code></pre>
+      <img src="images/carch.png" alt="Instalación de Git en Arch/Manjaro" class="small-img">
+    </div>
+
+    <!-- Windows -->
+    <div class="os-section" id="windows">
+      <h2>🖥️ Windows</h2>
+      <p>1. Ir al sitio oficial <a href="https://git-scm.com" target="_blank">git-scm.com</a></p>
+      <p>2. Descargar el instalador de Git para Windows</p>
+      <img src="images/gitwind.png" alt="Instalador de Git en Windows">
+      <pre><code>https://git-scm.com/download/win</code></pre>
+      <p>3. Ejecutar el instalador. Recomendamos:</p>
+      <ul>
+        <li>✔ Activar la opción <strong>"Git Bash Here"</strong></li>
+        <li>✔ Elegir <strong>"Use Git from Git Bash only"</strong> cuando pregunte por PATH</li>
+        <li>✔ Mantener las demás opciones por defecto</li>
+      </ul>
+      <img src="images/gitbash.png" alt="Instalador de Git en Windows - Pantalla 1">
+      <p>Una vez instalado correctamente, la consola de GitBash se ve de esta manera:</p>
+      <img src="images/gitbashconsol.png" alt="Git en Windows - Consola">
+    </div>
+
+    <!-- macOS -->
+    <div class="os-section" id="macos">
+      <h2>🍏 macOS</h2>
+      <p>1. Instalar Homebrew (si no lo tienes instalado):</p>
+      <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+      <img src="images/cmac.png" alt="Instalación de Homebrew en macOS" class="small-img">
+      <p class="img-caption">Instalación de Homebrew en macOS</p>
+
+      <p>2. Instalar Git usando Homebrew:</p>
+      <pre><code>brew install git</code></pre>
+      <p class="img-caption">Instalación de Git usando Homebrew</p>
+    </div>
+
+    <!-- Común para todos -->
+    <div class="os-section" id="todos">
+      <h2>✅ TODOS (Después de instalar)</h2>
+      <h3>Verificar la versión</h3>
+      <pre><code>git --version</code></pre>
+      <img src="images/pasouno1.png" alt="Verificación de versión de Git">
+
+      <h3>Configuración Inicial de Git</h3>
+      <p>Configura tu usuario y correo electrónico para identificar tus commits (IMPORTANTE: debe coincidir con tu usuario y correo de GitHub):</p>
+      <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@ejemplo.com"</code></pre>
+      <img src="images/pasouno2.png" alt="Configuración de usuario y correo">
+
+      <p>Verifica que la configuración se haya aplicado correctamente:</p>
+      <pre><code>git config --list</code></pre>
+      <img src="images/pasouno3.png" alt="Verificación de configuración de Git">
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="index.html">⬅️ Volver al índice</a> | <a href="paso2.html">➡️ Ir al Paso 2</a></p>
+  </footer>
+</body>
+</html>

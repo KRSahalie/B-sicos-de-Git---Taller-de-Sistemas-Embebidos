@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 7 - Actividades Prácticas Colaborativas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step-block img {
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .img-github {
+      max-width: 95%;
+    }
+    .step-block {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    pre {
+      background-color: #111;
+      color: #0f0;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      text-align: left;
+    }
+    .img-caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #eee;
+    }
+    .summary {
+      margin-top: 20px;
+      text-align: left;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      color: #eee;
+    }
+    .summary h3 {
+      color: #0ff;
+    }
+    .example a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    .example a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 7 - Actividades de Práctica Colaborativas</h1>
+  </header>
+
+  <nav>
+    <a href="paso5.html">⬅️ Paso 6</a> |
+    <a href="index.html">🏠 Inicio</a>
+  </nav>
+
+  <section>
+
+    <!-- Sincronizar rama -->
+    <div class="step-block">
+      <h2>0. Sincronizar tu rama con el repositorio</h2>
+      <p>Antes de empezar, asegúrate de tener los últimos cambios de <code>main</code> en tu rama:</p>
+      <pre><code>git checkout tu-rama
+git pull origin main</code></pre>
+      <p>Esto evita conflictos y te asegura trabajar con la versión más reciente de todos los archivos.</p>
+      <p class="img-caption">Ejemplo de terminal mostrando pull exitoso:</p>
+      <img src="images/pasosiete1.png" alt="Git pull main" class="img-github">
+    </div>
+
+    <!-- Actividad 1 -->
+    <div class="step-block">
+      <h2>1. Editar "participantes.txt"</h2>
+      <p>Agrega tu nombre y color favorito en <code>src/participantes.txt</code> sin borrar lo que otros hayan agregado:</p>
+      <h3>Pasos:</h3>
+      <ol>
+        <li>Ubícate en la carpeta <code>src</code>:
+          <pre><code>cd src</code></pre>
+        </li>
+        <li>Abre el archivo <code>participantes.txt</code> en un editor:
+          <pre><code>nano participantes.txt      # Linux/WSL
+notepad participantes.txt   # Windows</code></pre>
+          <img src="images/pasosiete2.png" alt="Editando en Windows" class="img-github">
+        </li>
+        <li>Agrega tu información al final:
+          <pre><code>Nombre: TuNombre | Color favorito: TuColor</code></pre>
+          <p>No borres las líneas de otros participantes.</p>
+          <img src="images/pasosiete3.png" alt="Editando participantes.txt" class="img-github">
+        </li>
+        <li>Guarda los cambios y cierra el editor.</li>
+        <li>Haz commit y push:
+          <pre><code>git add src/participantes.txt
+git commit -m "Agregado mi nombre y color favorito"
+git push origin &lt;tu-rama&gt;</code></pre>
+          <img src="images/pasosiete4.png" alt="Commit y push de participantes.txt" class="img-github">
+        </li>
+      </ol>
+      <p class="img-caption">Ejemplo en GitHub:</p>
+      <img src="images/pasosiete5.png" alt="Ejemplo participantes.txt en GitHub" class="img-github">
+    </div>
+
+    <!-- Actividad 2 -->
+    <div class="step-block">
+      <h2>2. Subir una imagen a <code>images</code> (flor o planta)</h2>
+      <h3>Pasos paso a paso:</h3>
+      <ol>
+        <li>Volver a la raíz del repositorio:
+          <pre><code>cd ..</code></pre>
+        </li>
+        <li>Entrar a la carpeta <code>imagenes</code>:
+          <pre><code>cd images</code></pre>
+        </li>
+        <img src="images/pasosiete6.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Buscar o descargar una imagen de una flor o planta desde tu navegador.</li>
+        <li>Copiar o arrastrar la imagen a la carpeta <code>images</code> de tu repositorio.</li>
+        <li>Renombrar la imagen de forma clara con tu nombre (la extensión puede ser png, jpg etc.):
+          <pre><code>TuNombre_flor.png</code></pre>
+        <img src="images/pasosiete7.png" alt="Imagen subida en GitHub" class="img-github">
+        </li>
+        <li>Revisar que la foto esté en la carpeta de imagenes del repositorio colaborativo:</pre>
+        <img src="images/pasosiete8.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Volver a la consola, asegurándote de estar dentro de <code>imagenes</code>.</li>
+        <li>Agregar la imagen al control de versiones:
+          <pre><code>git add TuNombre_flor.png</code></pre>
+        </li>
+        <li>Hacer commit con mensaje descriptivo:
+          <pre><code>git commit -m "Subida de mi imagen de flor favorita"</code></pre>
+        </li>
+        <li>Enviar los cambios a tu rama remota:
+          <pre><code>git push origin tu-rama(nombre)</code></pre>
+        </li>
+        <img src="images/pasosiete10.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Verificar en GitHub que la imagen se subió correctamente.</li>
+      </ol>
+      <p class="img-caption">Ejemplo en GitHub:</p>
+      <img src="images/pasosiete11.png" alt="Imagen subida en GitHub" class="img-github">
+    </div>
+
+    <!-- Actividad 3 -->
+    <div class="step-block">
+      <h2>3. Subir un documento interesante a <code>docs</code></h2>
+      <h3>Pasos paso a paso:</h3>
+      <ol>
+        <li>Volver a la raíz del repositorio si no estás ahí:
+          <pre><code>cd ..</code></pre>
+        </li>
+        <li>Entrar a la carpeta <code>docs</code>:
+          <pre><code>cd docs</code></pre>
+        </li>
+        <img src="images/pasosiete12.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Seleccionar un documento (noticia, artículo, PDF (no más de 10 páginas)) y, descargarlo y copiarlo dentro de <code>docs</code>.</li>
+        <img src="images/pasosiete13.png" alt="Imagen subida en GitHub" class="img-github">
+        <img src="images/pasosiete14.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Renombrar el archivo de manera clara, con tu nombre al final, por ejemplo:
+          <pre><code>noticia_tecnologia_Kendy.pdf</code></pre>
+        </li>
+        <img src="images/pasosiete15.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Agregar y revisar que el PDF esté en la carpeta de docs del repositorio colaborativo:</pre>
+        <img src="images/pasosiete16.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Agregar el archivo a Git:
+          <pre><code>git add Huracanes_Kendy.pdf</code></pre>
+        </li>
+        <li>Hacer commit:
+          <pre><code>git commit -m "Subida de documento interesante"</code></pre>
+        </li>
+        <li>Enviar los cambios a tu rama:
+          <pre><code>git push origin tu_rama</code></pre>
+        </li>
+        <img src="images/pasosiete17.png" alt="Imagen subida en GitHub" class="img-github">
+        <li>Verificar en GitHub que el documento está visible.</li>
+      </ol>
+      <p class="img-caption">Ejemplo en GitHub:</p>
+      <img src="images/pasosiete18.png" alt="Documento subido en GitHub" class="img-github">
+    </div>
+
+    <!-- Pull Request -->
+    <div class="step-block">
+      <h2>4. Crear Pull Request (después de las actividades)</h2>
+      <p>Cuando termines las tres actividades y tengas todo commit/pusheado en tu rama, crea un Pull Request para fusionarla con <code>main</code>:</p>
+      <ul>
+        <li>Entra al repositorio en GitHub: 
+          <a href="https://github.com/MiniTallerGit/ActividadColaborativa" target="_blank">https://github.com/MiniTallerGit/ActividadColaborativa</a>
+        </li>
+        <li>Pestaña <strong>Pull requests</strong> → <strong>New pull request</strong></li>
+        <li>Selecciona <strong>base</strong>: main y <strong>compare</strong>: tu rama personal:</li>
+        <img src="images/pasosiete19.png" alt="Documento subido en GitHub" class="img-github">
+        <li>Agrega título y descripción, luego haz clic en <strong>Create pull request</strong>:</li>
+        <img src="images/pasosiete20.png" alt="Documento subido en GitHub" class="img-github">
+        <li>Espera revisión y confirma merge a main:</li>
+        <img src="images/pasosiete21.png" alt="Documento subido en GitHub" class="img-github">
+        <img src="images/pasosiete22.png" alt="Documento subido en GitHub" class="img-github">
+      </ul>
+      <p class="img-caption">Ejemplo de Pull Request Cerrado en GitHub:</p>
+      <img src="images/pasosiete23.png" alt="Pull Request" class="img-github">
+      <p class="img-caption">Finalmente, los cambios se ven en el Repositorio Colaborativo, concluyendo así las actividades del Mini Taller de Git:</p>
+      <img src="images/pasosiete24.png" alt="Pull Request" class="img-github">
+    </div>
+
+    <!-- Resumen -->
+    <div class="summary">
+      <h3>📋 Resumen de actividades antes del Pull Request:</h3>
+      <ol>
+        <li>Sincronizar tu rama con <code>main</code> (<code>git pull</code>)</li>
+        <li>Editar <code>participantes.txt</code> y hacer commit/push</li>
+        <li>Subir una imagen a <code>imagenes</code> y hacer commit/push</li>
+        <li>Subir un documento a <code>docs</code> y hacer commit/push</li>
+        <li>Crear Pull Request para fusionar tu rama con <code>main</code></li>
+      </ol>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="paso5.html">⬅️ Volver al Paso 6</a> | <a href="index.html">🏠 Inicio</a></p>
+  </footer>
+</body>
+</html>

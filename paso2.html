@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 2 - Configuración de SSH para GitHub</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Mini menú flotante */
+    .internal-menu {
+      text-align: center;
+      margin: 20px 0;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 8px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+    .internal-menu a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .internal-menu a:hover {
+      text-decoration: underline;
+    }
+
+    /* Todas las imágenes de consola (pasodos1-5,10) */
+    .step-block img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 10px auto 20px auto;
+      border: 2px solid #888;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Solo imágenes de GitHub (pasodos6-9) */
+    .img-github {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 10px auto 20px auto;
+      border: 2px solid #888;
+      border-radius: 5px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .img-caption {
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    pre, code {
+      text-align: left;
+    }
+
+    .step-block li {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .step-block img,
+      .img-github {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 2 - Configuración de SSH para GitHub</h1>
+  </header>
+
+  <nav>
+    <a href="paso1.html">⬅️ Paso 1</a> |
+    <a href="index.html">🏠 Inicio</a> |
+    <a href="paso3.html">➡️ Paso 3</a>
+  </nav>
+
+  <div class="internal-menu">
+    Ir a: 
+    <a href="#generar">🔑 Generar llave SSH</a> |
+    <a href="#añadir">➕ Añadir a GitHub</a> |
+    <a href="#probar">✅ Probar conexión</a>
+  </div>
+
+  <section>
+    <div class="step-block">
+      <h2 id="generar">Generar una llave SSH</h2>
+      <ol>
+        <li>Abre la terminal (Linux/macOS) o Git Bash (Windows).</li>
+        <li>Genera la llave SSH con tu correo de GitHub:
+          <pre><code>ssh-keygen -t ed25519 -C "tuemail@ejemplo.com"</code></pre>
+          <img src="images/pasodos1.png" alt="Generando llave ssh">
+        </li>
+        <li>Presiona <strong>Enter</strong> para aceptar la ruta por defecto y, si quieres, agrega una passphrase.
+          <img src="images/pasodos2.png" alt="Opciones al generar">
+        </li>
+        <li>Se creará una llave con su respectiva imagen:
+          <img src="images/pasodos3.png" alt="Llave generada">
+        </li>
+        <li>Verifica que la llave se creó:
+          <pre><code>ls ~/.ssh</code></pre>
+          <img src="images/pasodos4.png" alt="Verificación de llave">
+        </li>
+        <li>Copiar la llave pública:
+          <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+          <img src="images/pasodos5.png" alt="Copiando llave pública">
+        </li>
+      </ol>
+
+      <h2 id="añadir">Añadir la llave SSH a GitHub</h2>
+      <ol>
+        <li>Accede a GitHub → Configuración → <strong>SSH and GPG keys</strong>.
+          <img src="images/pasodos6.png" alt="Configuración SSH GitHub" class="img-github">
+        </li>
+        <li>Haz clic en <strong>New SSH key</strong>.
+          <img src="images/pasodos7.png" alt="Agregar nueva llave" class="img-github">
+        </li>
+        <li>Pega la llave pública que copiaste en el campo "Key".
+          <img src="images/pasodos8.png" alt="Pegar llave pública" class="img-github">
+        </li>
+        <li>Asigna un nombre descriptivo y guarda.
+          <img src="images/pasodos9.png" alt="Guardar llave" class="img-github">
+        </li>
+      </ol>
+
+      <h2 id="probar">Probar la conexión SSH</h2>
+      <pre><code>ssh -T git@github.com</code></pre>
+      <li>Aprueba la solicitud y verifica el mensaje:
+        <img src="images/pasodos10.png" alt="Conexión exitosa">
+      </li>
+      <p>Si todo está correcto, GitHub te dará un mensaje de bienvenida.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="paso1.html">⬅️ Volver al Paso 1</a> | <a href="paso3.html">➡️ Ir al Paso 3</a></p>
+  </footer>
+</body>
+</html>

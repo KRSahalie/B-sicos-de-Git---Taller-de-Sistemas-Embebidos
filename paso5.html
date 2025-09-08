@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paso 5 - Crear tu Rama y Empezar a Colaborar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .step-block img {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .step-block {
+      text-align: center;
+    }
+    pre {
+      background-color: #111;
+      color: #0f0;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      display: inline-block;
+      text-align: left;
+    }
+    .img-caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #eee;
+    }
+    .summary {
+      margin-top: 20px;
+      text-align: left;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      color: #eee;
+    }
+    .summary h3 {
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paso 5 - Crear tu Rama y Empezar a Colaborar</h1>
+  </header>
+
+  <nav>
+    <a href="paso4.html">⬅️ Paso 4</a> |
+    <a href="index.html">🏠 Inicio</a> |
+    <a href="paso6.html">➡️ Paso 6</a>
+  </nav>
+
+  <section>
+
+    <!-- Crear rama -->
+    <div class="step-block">
+      <h2>1. Crear una nueva rama</h2>
+      <p>Para trabajar sin afectar la rama <strong>main</strong>, crea tu propia rama:</p>
+      <pre><code>git checkout -b tu-nombre</code></pre>
+      <p class="img-caption">Ejemplo: <code>git checkout -b raquel</code></p>
+      <img src="images/pasocincos1.png" alt="Creando una nueva rama">
+      <img src="images/pasocincos2.png" alt="Rama creada">
+    </div>
+
+    <!-- Verificar rama -->
+    <div class="step-block">
+      <h2>2. Verificar en qué rama estás</h2>
+      <pre><code>git branch</code></pre>
+      <p class="img-caption">El asterisco (*) debe aparecer junto a tu rama.</p>
+      <img src="images/pasocincos3.png" alt="Verificando la rama actual">
+    </div>
+
+    <!-- Editar archivos -->
+    <div class="step-block">
+      <h2>3. Editar o agregar un archivo</h2>
+      <pre><code>echo "Hola soy Raquel" &gt; raquel.txt</code></pre>
+      <p class="img-caption">Crea un archivo con un mensaje dentro.</p>
+      <img src="images/pasocincos4.png" alt="Creando un archivo nuevo">
+    </div>
+
+    <!-- Guardar cambios -->
+    <div class="step-block">
+      <h2>4. Guardar los cambios</h2>
+      <h3>📌 Añadir cambios al área de preparación</h3>
+      <pre><code>git add .</code></pre>
+      <p class="img-caption">El punto (.) añade todos los archivos modificados.</p>
+      <img src="images/pasocincos5.png" alt="Agregando cambios">
+
+      <h3>📌 Hacer un commit</h3>
+      <pre><code>git commit -m "Agregué mi archivo personal"</code></pre>
+      <p class="img-caption">El mensaje describe los cambios realizados.</p>
+      <img src="images/pasocincos6.png" alt="Commit de cambios">
+    </div>
+
+    <!-- Subir la rama -->
+    <div class="step-block">
+      <h2>5. Subir tu rama al repositorio remoto</h2>
+      <p>Ahora debemos subir nuestra rama y asociarla al remoto:</p>
+      <pre><code>git push origin tu-nombre</code></pre>
+      <p class="img-caption">Ejemplo: <code>git push origin kendy</code></p>
+      <img src="images/pasocincos7.png" alt="Subiendo la rama al remoto">
+      <p>De esta manera la rama ya está creada y asociada al repositorio colaborativo:</p>
+      <img src="images/pasocincos8.png" alt="Visualización de rama subida en GitHub">
+      <p>Las ramas asociadas al repositorio colaborativo se pueden visualizar en la página del repositorio en GitHub:</p>
+      <img src="images/pasocincos9.png" alt="Listado de ramas en la página del repositorio en GitHub">
+    </div>
+
+    <!-- Nota final -->
+    <div class="step-block">
+      <h3>💡 Nota extra</h3>
+      <p>Con esto tu rama estará subida a GitHub y lista para colaborar. En el siguiente paso aprenderemos a hacer un <strong>Pull Request</strong>.</p>
+    </div>
+
+    <!-- Tip rápido para volver a main -->
+    <div class="step-block">
+      <h3>🔁 Tip rápido: volver a <code>main</code></h3>
+      <p>Si necesitas regresar a la rama principal ejecuta:</p>
+      <pre><code>git checkout main
+git pull origin main</code></pre>
+    </div>
+
+    <!-- Resumen de comandos -->
+    <div class="summary">
+      <h3>📋 Resumen de comandos usados en este paso:</h3>
+      <ul>
+        <li><code>git checkout -b tu-nombre</code> → Crear tu rama personal.</li>
+        <li><code>git branch</code> → Verificar en qué rama estás.</li>
+        <li><code>echo "Hola soy ..." &gt; archivo.txt</code> → Crear un archivo nuevo.</li>
+        <li><code>git add .</code> → Añadir cambios al área de preparación.</li>
+        <li><code>git commit -m "mensaje"</code> → Guardar los cambios localmente.</li>
+        <li><code>git push --set-upstream origin tu-nombre</code> → Subir la rama al repositorio remoto y asociarla.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="paso4.html">⬅️ Volver al Paso 4</a> | <a href="paso6.html">➡️ Ir al Paso 6</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Fondo y estilo general */
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: "Fira Code", monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #121212;
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 2px solid #00ffcc;
+}
+
+header h1 {
+  color: #00ffcc;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Navegación */
+nav {
+  background: #252525;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+nav a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Bloques de pasos */
+.step-block {
+  border: 2px solid #00ffcc;
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* Subtítulos */
+h2, h3, h4 {
+  margin-top: 15px;
+  color: #d3f3ed;
+}
+
+/* Código */
+pre {
+  background-color: #111;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+code {
+  color: #e9ae2f;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+}
+
+/* Enlaces dentro del footer */
+footer a {
+  color: #00ffcc;       /* color visible y brillante */
+  font-weight: bold;     /* opcional, para resaltar */
+  text-decoration: none; /* quita subrayado */
+}
+
+footer a:hover {
+  text-decoration: underline; /* subrayado al pasar el mouse */
+}
+footer {
+  background: #121212;
+  border-top: 1px solid #333;
+  color: #999;
+  font-size: 0.85rem;
+
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  padding: 15px;
+}
+
+.step-img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto; /* Esto centra la imagen */
+}
